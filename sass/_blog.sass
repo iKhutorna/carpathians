@@ -1,0 +1,169 @@
+
+// Begin Section Blog
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+.blog
+	padding: 110px 20px 120px
+	
+	+media(940)
+		padding: calc(110*100%/940) 20px calc(120*100%/940)
+		
+	+media(320)
+		padding-bottom: 70px
+
+.blog-container
+	position: relative
+	max-width: 960px
+	margin: 84px auto 0
+	
+	+media(1200)
+		margin: 84px 100px 0
+
+
+	+media(990)
+		margin: calc(84*100%/940) 0 0
+		.blog-item:nth-child(3)
+			display: none
+			
+	+media(630)
+		.blog-item:nth-child(4)
+			display: none
+
+	
+.blog-item__button
+	position: absolute
+	top: 50%
+	width: 30px
+	height: 30px
+	border-top: 6px solid #f4c60b
+	border-right: 6px solid #f4c60b
+	cursor: pointer
+	
+	+media(360)
+		width: 20px
+		height: 20px
+	
+.blog-item__button-next
+	left: 106%
+	transform: rotate(45deg)
+	
+	&:hover
+    	left: 106.5%
+    	
+	+media(990)
+		left: 87%
+		
+		&:hover
+    		left: 87.5%
+    		
+	+media(768)
+		left: 91%
+		
+		&:hover
+    		left: 91.5%
+    		
+	+media(240)
+		top: 107%
+		left: 80%
+		
+		&:hover
+			left: 80%
+    	
+.blog-item__button-previous
+	right: 106%
+	transform: rotate(225deg)
+	
+	&:hover
+		right: 106.5%
+		
+	+media(990)
+		right: 87%
+		
+		&:hover
+    		right: 87.5%
+    		
+	+media(768)
+		right: 91%
+		
+		&:hover
+    		right: 91.5%
+    		
+	+media(240)
+		top: 107%
+		right: 80%
+		
+		&:hover
+			right: 80%
+   
+.blog-item	
+	width: 27%
+	display: inline-block
+	margin: 0 3.12%
+	position: relative
+	color: #fff
+	
+	+media(900)
+		width: 30%
+		
+	+media(768)
+		width: 35%
+		
+	+media(630)
+		width: 260px
+		
+	+media(360)
+		width: 70%
+		
+	+media(240)
+		width: 100%
+		
+.blog-item__container
+	position: absolute
+	top: 0
+	margin: 6px
+	
+.blog-item__header-title
+	position: absolute
+	left: 18px
+	top: 36px
+	margin-right: 70px
+	text-transform: uppercase
+	font-size: 18px
+	font-weight: 700
+	text-align: left
+	
+	+media(1160)
+		text-align: 
+	
+.blog-item__header-day
+	font-size: 36px
+	font-weight: 700
+	text-transform: uppercase
+	
+.blog-item__header-month
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 300
+	line-height: 24px
+	
+.blog-item__header-date
+	position: absolute
+	top: 14px
+	right: 18px
+	
+.blog-item__description
+	position: absolute
+	bottom: 0px
+	padding: 15px
+	text-align: left
+	font-size: 12px
+	font-weight: 400
+	line-height: 22px
+	
+.blog-item__background
+	max-width: 100%
+	height: auto
+	display: block
+// End Section Blog

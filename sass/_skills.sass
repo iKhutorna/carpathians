@@ -1,0 +1,185 @@
+
+// Begin Section Skills
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+.skills__content
+	padding: 110px 20px 120px
+	background-image: url("../pic/skills-bg1.png")
+	background-size: cover
+	background-position: 50% 50%
+	
+	+media(940)
+		padding: calc(110*100%/940) 20px calc(120*100%/940)
+	
+.skills__container
+	margin-top: 180px
+ 	
+	+media(940)
+		margin-top: calc(180*100%/940)
+	
+.skills-item
+	margin: 0 76px
+	display: inline-block 
+	
+	+media(990)
+		margin: 0 30px
+	
+	+media(768)
+		width: 136px
+		
+	+media(630)
+		margin: 0 10px
+		
+	+media(520)
+		margin: 0 12%
+		margin-top: 50px
+		&:nth-child(1)
+			margin-top: 0
+				
+.skils-item__progress
+	max-width: 100%
+	transform: rotate(-90deg)
+	
+.skills-item__progress-value
+	position: absolute
+	top: 29%
+	left: 33%
+	text-transform: uppercase
+	font-weight: 300
+	font-size: 48px
+	
+	+media(480)
+		top: 35%
+		left: 36%
+		font-size: 38px
+		
+	+media(320)
+		top: 38%
+		left: 40%
+		font-size: 30px
+		
+	.is-little
+		font-size: 24px	
+		
+		+media(480)
+			font-size: 19px
+		
+		+media(320)
+			font-size: 14px 
+
+.skils-item__progress .skils-item__progress-front
+	fill: transparent
+	stroke: #f4c60b
+	stroke-width: 7
+	stroke-dasharray: calc(45% * 3.14168* 2)
+	stroke-dashoffset: 0
+	
+.skils-item__progress .skils-item__progress-back
+	fill: transparent
+	stroke-width: 7
+	stroke: #fff
+
+.skills-item__svg-container
+	margin: 0 auto
+	position: relative
+	max-width: 164px
+			
+.skils-item__progress .progress-75
+	stroke-dashoffset: calc((45% * 3.14168* 2) * (1 - 0.75))
+
+.skils-item__progress .progress-90
+	stroke-dashoffset: calc((45% * 3.14168* 2) * (1 - 0.9))
+
+.skils-item__progress .progress-30
+	stroke-dashoffset: calc((45% * 3.14168* 2) * (1 - 0.3))
+
+.skills-item__title
+	margin-top: 50px
+	display: block
+	font-size: 24px
+	font-weight: 300
+	
+	+media(940)
+		margin-top: calc(50*100%/940)
+		
+	+media(480)
+		font-size: 20px
+	
+	+media(320)
+		font-size: 18px
+	
+.skills__footer
+	padding: 155px 20px 110px
+	background-image: url("../pic/skills-bg2.png")
+	background-size: cover
+	background-position: 50% 50%
+	
+	+media(940)
+		padding: calc(155*100%/940) 20px calc(110*100%/940)
+	
+.citation
+	margin: 0 auto
+	max-width: 1125px
+	color: #fff
+
+.citation__content
+	position: relative
+	margin: 0 50px 81px 50px
+	
+	+media(550)
+		margin: 0 30px calc(81*100%/550) 30px
+		
+	+media(320)
+		margin: 0 10px calc(81*100%/550) 10px
+
+	
+.citation__text
+	font-family: 'Crimson Text', serif
+	font-size: 34px
+	font-weight: 400
+	
+	+media(550)
+		font-size: 27px
+		
+	+media(400)
+		font-size: 22px
+		
+	+media(320)
+		font-size: 17px
+		
+.citation__author
+	margin-right: 50px
+	text-align: right
+	font-size: 24px
+	font-weight: 400
+	
+	+media(550)
+		margin-right: 30px
+		font-size: 19px
+		
+	+media(400)
+		font-size: 15px
+		
+	+media(320)
+		margin-right: 10px
+		font-size: 12px
+	
+.citation__open
+	bottom: 115%
+	right: 102%
+	position: absolute
+	
+	+media(550)
+		width: 5%
+
+.citation__close
+	left: 102%
+	top: 115%
+	position: absolute
+	
+	+media(550)
+		width: 5%
+	
+// End Section Skills

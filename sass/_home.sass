@@ -1,0 +1,241 @@
+
+// Begin Section Home
+@mixin media($width)
+  @media screen and (max-width: $width + "px")
+    @content
+
+.home 
+  padding-bottom: 30px
+  background-image: url("../pic/home-bg.png")
+  background-size: cover
+  background-position: 50% 50%
+  overflow: hidden
+  position: relative
+
+.home__container 
+  padding: 0 20px
+  max-width: 1145px
+  min-width: 240px
+  margin: 0 auto
+  box-sizing: border-box
+
+.home__header
+  padding-top: 30px
+
+.home-header__logo 
+  float: left
+  
+  +media(360)
+    width: 12%
+  
+.home-header__menu
+  padding-top: 12px
+  text-transform: uppercase
+  float: right
+  font-size: 16px
+  font-weight: 700
+  
+  
+  +media(768)
+    right: -300px
+    top: 80px
+    position: absolute
+    width: 230px
+    background: rgba(16, 45, 29, 0.8)
+    border-radius: 5px
+    transition: all 0.5s ease
+    text-align: center
+    font-size: 22px
+    
+  +media(420)
+    font-size: 20px
+    
+  +media(315)
+    width: 150px
+    font-size: 16px
+  
+.home-header__menu-item
+  position: relative
+  margin-left: 60px
+  color: #fff
+  text-decoration: none
+  font-weight: 700 
+  
+  &:hover
+    color: #f4c60b
+    
+  &:after
+    content: "";
+    left: calc(100% + 27px)
+    top: 6.5px
+    position: absolute
+    box-sizing: border-box
+    width: 5px
+    height: 5px
+    border: 1px solid #f4c60b
+    border-radius: 50%
+
+  &:last-child
+    &:after
+      display: none
+      
+  +media(768)
+    display: block
+    line-height: 80px
+    margin-left: 0
+    
+    &:after
+      display: none
+      
+  +media(420)
+    line-height: 60px 
+    
+  +media(315)
+    line-height: 45px 
+
+.menu-button 
+  width: 46px
+  height: 46px
+  display: none
+  position: relative
+  float: right
+  
+  &:hover
+    .menu-button__line
+      background-color: transparent
+      
+      &:before
+        width: 46px
+        left: -8px
+        top: -17px
+        
+      &:after 
+        width: 46px
+        left: -8px
+        bottom: -17px 
+      
+    .menu-button__text
+      font-size: 14px 
+      
+  +media(768)
+    display: block
+    cursor: pointer
+  
+.menu-button__line
+  position: absolute
+  top: 18px
+  left: 8px
+  height: 3px
+  width: 30px
+  background-color: #fff
+  transition: background-color 100ms ease-in
+  
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    height: 3px
+    width: 30px
+    background-color: #fff
+    transition: all 150ms ease-in-out
+
+  &:before
+    top: -12px
+    
+  &:after
+    bottom: -12px
+    
+.menu-button__text
+  width: 46px
+  position: absolute
+  top: -18px
+  left: -8px
+  font-size: 0
+  line-height: 40px
+  color: #fff
+  font-weight: bold 
+  transition: font-size 275ms ease-out   
+
+#home-header__menu-button
+  display: none
+  position: relative
+  
+#home-header__menu-button:checked + .home-header__menu
+  right: 20px
+
+.home__title
+  margin: 295px 0 5px
+  text-transform: uppercase
+  color: #f4c60b
+  font-size: 72px
+  font-weight: 700
+  
+  +media(940)
+  margin: calc(295*100%/940) 0 5px
+  
+  +media(768)
+    font-size: 50px
+    
+  +media(360)
+    font-size: 38px
+    
+  +media(240)
+    font-size: 30px
+  
+.home__description
+  font-family: 'Crimson Text', serif
+  font-size: 24px
+  font-weight: 400
+  color: #fff
+  font-style: italic
+  
+  +media(360)
+    font-size: 18px
+    
+  +media(240)
+    font-size: 14px
+  
+.home__scroll
+  margin: 127px 0 44px 
+  
+  +media(940)
+  margin: calc(127*100%/940) 0 calc(44*100%/940)
+  
+.home__scroll-title 
+  display: block
+  margin-top: 30px
+  text-transform: uppercase
+  font-size: 18px
+  font-weight: 700
+  color: #fff
+  
+  +media(940)
+    margin-top: calc(30*100%/940)
+
+  +media(360)
+    font-size: 14px
+    
+  +media(240)
+    font-size: 10px
+    
+.home__scroll-icon 
+  
+  +media(360)
+    width: 6%
+
+.home__slider-item
+  width: 13px
+  height: 13px
+  display: inline-block
+  margin: 0 3px
+  border: 1px solid #f4c60b
+  border-radius: 50%
+  cursor: pointer
+  
+  &.is-active,
+  &:hover
+    background: #f4c60b
+// End Section Home
+
+

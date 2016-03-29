@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,700,800)
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:300,400,500,600,400italic)
+
+   
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+body 
+	margin: 0
+	text-align: center
+	font-family: 'Raleway', sans-serif 
+
+.clearfix
+	&:after 
+		content: ''
+		overflow: hidden
+		display: table
+		clear: both
+		
+.title 
+	display: inline-block
+	padding-bottom: 4px 
+	border-bottom: solid 4px #f4c60b
+	color: #000
+	text-transform: uppercase
+	font-size: 48px
+	font-weight: 800
+	
+	+media(768)
+		font-size: 36px
+		
+	+media(480)
+		font-size: 30px
+		
+	+media(320)
+		font-size: 25px
+
+.description
+	padding-top: 30px
+	font-family: 'Crimson Text', serif
+	font-size: 24px
+	font-weight: 400
+	color: #000
+	
+	+media(768)
+		padding-top: calc(30*100%/768) 
+		font-size: 20px
+		
+	+media(320)
+		font-size: 16px
+			
+.button
+	width: 260px
+	display: block
+	box-sizing: border-box
+	margin: 0 auto
+	border: 3px solid #f4c60b
+	box-shadow: 7px 7px 10px #757575
+	text-transform: uppercase 
+	cursor: pointer
+	text-decoration: none
+	
+	&:hover
+		box-shadow: inset 0 0 40px #f4c60b
+		transition: box-shadow .10s ease-in-out
+		
+	+media(768)
+		width: 200px
+		
+	+media(320)
+		width: 150px
+	
+.button__title 
+	line-height: 64px
+	font-size: 24px
+	font-weight: 700
+	color: #000
+	
+	+media(768)
+		line-height: 50px
+		font-size: 18px
+		
+	+media(320)
+		line-height: 44px
+		font-size: 14px
+

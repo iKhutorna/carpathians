@@ -1,0 +1,44 @@
+// Begin Section About
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+.about
+	padding: 110px 20px 115px
+	background-image: url("../pic/about-bg.png")
+	background-size: cover
+	background-position: 50% 50%
+	
+	&:nth-child(3)
+		margin: 10 auto
+
+	+media(940)
+		padding: calc(110*100%/940) 20px calc(115*100%/940)
+	
+.about__container
+	max-width: 860px
+	margin: 137px auto 90px
+	line-height: 36px
+	text-align: justify
+	color: #000
+	font-family: 'Crimson Text', serif
+	font-size: 18px
+	font-weight: 400
+	
+	+media(940)
+		margin: calc(137*100%/940) auto calc(90*100%/940)
+		
+	+media(320)
+		line-height: 27px
+	
+	+media(240)
+		line-height: 20px
+		font-size: 14px
+		
+.about__container span
+	display: block
+	text-align: center
+	
+.about__text--hidden
+	display: none 	
+// End Section About	

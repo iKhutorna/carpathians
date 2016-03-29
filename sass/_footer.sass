@@ -1,0 +1,59 @@
+
+// Begin Section Footer
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+.footer
+	padding: 52px 0 20px
+	background: #303030
+	color: #fff
+
+.footer__title
+	display: block
+	margin: 17px 0 14px
+	font-size: 24px
+	font-weight: 700
+	text-transform: uppercase
+	
+.footer__description
+	display: block
+	font-family: 'Crimson Text', serif
+	font-size: 12px
+	font-style: italic
+	
+.footer__copiright
+	display: block
+	font-size: 12px
+	font-weight: 300
+	
+.footer-social__icon 
+	width: 26px
+	height: 19px
+	display: inline-block
+	margin: 56px 0 30px
+	background: url('../pic/social.svg')
+	
+.is-google 
+	background-position: 0px 0px
+
+	&:hover
+		background: url('../pic/social-hover.svg')
+	
+.is-facebook
+	background-position: -28px 0px
+
+	&:hover
+		background: url('../pic/social-hover.svg')
+		background-position: -28px 0px
+
+.is-twitter
+	background-position: -51px 0px
+
+	&:hover
+		background: url('../pic/social-hover.svg')
+		background-position: -51px 0px
+// End Section Footer	
+
+
+

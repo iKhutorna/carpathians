@@ -1,0 +1,68 @@
+
+// Begin Section Clients
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+.clients
+	padding-top: 110px
+	background: #fbfbfb
+	
+	+media(940)
+		padding-top: calc(110*100%/940) 
+		
+.clients__wrap
+	padding: 0 20px
+	
+.clients-container
+	margin-top: 116px
+	border: 0.5px solid #ebebeb
+	
+	+media(940)
+		margin-top: calc(116*100%/940)
+
+.clients-item
+	width: 25%
+	display: inline-block
+	border: 0.5px solid #ebebeb
+	transition: box-shadow .4s ease-in-out
+	box-sizing: border-box
+	background: #fff
+	line-height: 240px
+	
+	&:hover
+		box-shadow: inset 0 0 50px #ebebeb
+	
+	+media(950)
+		padding: 0 calc(40*100%/950)
+		line-height: 160px
+		&:nth-child(1)
+			padding: 0 calc(70*100%/950)
+		
+	+media(850)
+		line-height: 150px
+		
+	+media(800)
+		line-height: 140px
+		
+	+media(600)
+		line-height: 100px
+		
+	+media(400)
+		padding: 0 calc(40*100%/400)
+		&:nth-child(1)
+			padding: 0 calc(70*100%/400)
+		width: 50%
+		line-height: 120px
+		
+	+media(320)
+		line-height: 95px
+		
+	+media(240)
+		line-height: 70px
+		
+.clients-item__logo
+	max-width: 100%
+	vertical-align: middle
+	
+// End Section Clients

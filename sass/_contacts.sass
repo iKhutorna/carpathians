@@ -1,0 +1,91 @@
+
+// Begin Section Contact
+@mixin media($width)
+ 	@media screen and (max-width: $width + "px")
+ 		@content
+
+.contacts
+	padding: 30px 20px 60px
+	background-image: url("../pic/contact-bg.png")
+	background-size: cover
+	background-position: 50% 50%
+	
+	+media(940)
+		padding: calc(30*100%/940) 20px calc(60*100%/940)
+	
+.contact__title
+	@extend .title
+	margin-bottom: 97px
+	color: #fff
+	
+	+media(940)
+		margin-bottom: calc(97*100%/940)
+	
+.contact-form__container
+	max-width: 500px
+	margin: 0 auto
+	
+.contact-form__field
+	padding: 14px
+	box-sizing: border-box
+	border: 3px solid white 
+	background: none
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+	color: #fff
+	
+	&:focus::-webkit-input-placeholder 
+		color: transparent
+		
+	&::-webkit-input-placeholder 
+		color: #fff
+		
+	&::-webkit-input-placeholder      
+		line-height: 20px 
+		transition: line-height 0.5s ease
+		
+	&:focus::-webkit-input-placeholder 
+		line-height: 100px;
+		transition: line-height 0.5s ease
+	
+.contact-form__name
+	width: 240px
+	float: left
+	
+	+media(525)
+		width: 100%
+		margin-bottom: 16px
+
+.contact-form__email
+	width: 240px
+	float: right
+	
+	+media(525)
+		width: 100%
+	
+.contact-form__message
+	width: 100%
+	height: 220px
+	margin: 16px 0 11px
+	
+.contact-form__button
+	width: 160px
+	box-sizing: border-box
+	float: left
+	background: #f4c60b
+	border: 3px solid #f4c60b
+	text-transform: uppercase 
+	cursor: pointer
+	text-decoration: none
+	box-shadow: 7px 7px 10px black
+	
+	&:hover
+		box-shadow: none 
+
+.contact-form__button-title
+	line-height: 44px
+	font-size: 14px
+	font-weight: 700
+	color: #000
+// End Section Contact
