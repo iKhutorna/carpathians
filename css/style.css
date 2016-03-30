@@ -636,7 +636,7 @@ body {
   color: #000;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 540px) {
   .portfolio__menu-item {
     width: 60%;
     margin-bottom: -1px;
@@ -653,6 +653,7 @@ body {
 
 .portfolio__gallery-item {
   width: 25%;
+  cursor: pointer;
 }
 
 .portfolio__gallery-item:hover {
@@ -837,7 +838,7 @@ body {
   display: inline-block;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1020px) {
   .skills-item {
     margin: 0 30px;
   }
@@ -849,7 +850,7 @@ body {
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 650px) {
   .skills-item {
     margin: 0 10px;
   }
@@ -871,26 +872,32 @@ body {
 }
 
 .skills-item__progress-value {
-  position: absolute;
   top: 29%;
   left: 33%;
+  position: absolute;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 48px;
 }
 
+@media screen and (max-width: 768px) {
+  .skills-item__progress-value {
+    left: 28%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .skills-item__progress-value {
-    top: 35%;
-    left: 36%;
+    top: 33%;
+    left: 33%;
     font-size: 38px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .skills-item__progress-value {
-    top: 38%;
-    left: 40%;
+    top: 36%;
+    left: 36%;
     font-size: 30px;
   }
 }

@@ -23,13 +23,13 @@
 	margin: 0 76px
 	display: inline-block 
 	
-	+media(990)
+	+media(1020)
 		margin: 0 30px
 	
 	+media(768)
 		width: 136px
 		
-	+media(630)
+	+media(650)
 		margin: 0 10px
 		
 	+media(520)
@@ -43,21 +43,24 @@
 	transform: rotate(-90deg)
 	
 .skills-item__progress-value
-	position: absolute
 	top: 29%
 	left: 33%
+	position: absolute
 	text-transform: uppercase
 	font-weight: 300
 	font-size: 48px
 	
+	+media(768)
+		left: 28%
+
 	+media(480)
-		top: 35%
-		left: 36%
+		top: 33%
+		left: 33%
 		font-size: 38px
 		
 	+media(320)
-		top: 38%
-		left: 40%
+		top: 36%
+		left: 36%
 		font-size: 30px
 		
 	.is-little
