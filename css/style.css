@@ -856,7 +856,7 @@ body {
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 530px) {
   .skills-item {
     margin: 0 12%;
     margin-top: 50px;
@@ -933,7 +933,6 @@ body {
 }
 
 .skills-item__svg-container {
-  margin: 0 auto;
   position: relative;
   max-width: 164px;
 }

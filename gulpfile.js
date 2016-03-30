@@ -45,8 +45,8 @@ gulp.task('js', function () {
 });
 
 //minify pic
-gulp.task('minify-image', function () {
-    gulp.src(['./images/*', './img/*', './pic/*'])
+gulp.task('minify-img', function () {
+    gulp.src('./img/**/*')
         .pipe(imageminJpegtran({
             progressive: true
         })())
@@ -54,14 +54,26 @@ gulp.task('minify-image', function () {
             quality: '65-80', 
             speed: 4}
         )())
-        .pipe(gulp.dest('./public/images/'));
+        .pipe(gulp.dest('./public/img/'));
+});
+
+gulp.task('minify-pic', function () {
+    gulp.src('./pic/**/*')
+        .pipe(imageminJpegtran({
+            progressive: true
+        })())
+        .pipe(imageminPngquant({
+            quality: '65-80', 
+            speed: 4}
+        )())
+        .pipe(gulp.dest('./public/pic/'));
 });
 
 //minify svg
 gulp.task('minify-svg', function () {
     return gulp.src(['./img/**/*.svg','./pic/**/*.svg'])
         .pipe(svgmin())
-        .pipe(gulp.dest('./public/images/'));
+        .pipe(gulp.dest('./public/pic/'));
 });
 
 
@@ -118,4 +130,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['server', 'sass', 'watch']);
-gulp.task('production', ['minify-css', 'minify-js', 'minify-image', 'minify-svg']);
+gulp.task('production', ['minify-css', 'minify-js', 'minify-img', 'minify-pic', 'minify-svg','minify-html']);
